@@ -2,6 +2,6 @@
 number = 98
 
 def print_int():
-    print(number, "Battery street\n")
+    print(f"{number} Battery street")
 
 print_int();
