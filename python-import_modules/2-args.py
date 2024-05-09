@@ -4,9 +4,9 @@ if __name__ == "__main__":
 
     cantArg = len(sys.argv)
 
-    if cantArg == 0:
+    if cantArg == 1:
         print("0 arguments.")
-    elif cantArg == 1:
+    elif cantArg == 2:
         print("1 argument:")
     else:
         print("{} arguments:".format(cantArg - 1))
