@@ -16,8 +16,11 @@ def roman_to_int(roman_string):
     num = 0
 
     for i in range(len(roman_string)):
-        if i > 0 and roman_char[roman_string[i]] > roman_char[roman_string[i - 1]]:
-            num += roman_char[roman_string[i]] - 2 * roman_char[roman_string[i - 1]]
+        if (i > 0) and (roman_char[roman_string[i]] >
+                        roman_char[roman_string[i - 1]]):
+
+            num += (roman_char[roman_string[i]] - 2 *
+                    roman_char[roman_string[i - 1]])
         else:
             num += roman_char[roman_string[i]]
 
