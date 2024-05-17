@@ -16,6 +16,6 @@ def list_division(my_list_1, my_list_2, list_length):
             print("out of range")
             list_ret.append(0)
         finally:
-            pass
+            continue
 
     return list_ret
