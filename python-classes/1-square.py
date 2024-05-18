@@ -6,7 +6,8 @@
 
 class Square:
 
-    """
+    """__init__
+
     Attributes:
         __size (int): tamanio
 
