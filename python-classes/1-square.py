@@ -5,9 +5,15 @@
 """
 
 class Square:
+
     """
-    Args:
-        size: ni idea
+     Attributes:
+        __size (int): tamanio
+
     """
     def __init__(self, size):
+        """
+        Args:
+            size: ni idea
+        """
         self.__size = size 
