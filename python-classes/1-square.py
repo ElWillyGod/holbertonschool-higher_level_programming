@@ -9,7 +9,7 @@ class Square:
     """__init__
 
     Attributes:
-        __size (int): tamanio
+        __size (int): tamanio del cuadrado
 
     """
     def __init__(self, size):
