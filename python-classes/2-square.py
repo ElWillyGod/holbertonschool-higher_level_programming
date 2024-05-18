@@ -13,7 +13,11 @@ class Square:
         __size (int): The size of square(private attribute).
     """
 
-    def __init__(self, size):
+    def __init__(self, size=0):
+        """
+        Args:
+            size (int): tamanio del cuadrado.
+        """
 
         if type(size) is not int:
             raise TypeError("size must be an integer")
