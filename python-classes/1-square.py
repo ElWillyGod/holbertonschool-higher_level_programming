@@ -8,7 +8,7 @@ class Square:
     metodo de inicio
 
     Attributes:
-        size (int): The size of square.
+        __size (int): The size of square.
     """
 
     def __init__(self, size):
