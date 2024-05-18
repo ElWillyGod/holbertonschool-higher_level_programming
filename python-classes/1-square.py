@@ -4,11 +4,11 @@
         ss
 """
 class Square:
-
     """__init__
+    metodo de inicio
 
     Attributes:
-        size (int): tamanio del cuadrado
+        size (int): The size of square.
     """
 
     def __init__(self, size):
