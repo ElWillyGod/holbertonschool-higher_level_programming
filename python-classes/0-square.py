@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-'''
+"""
 Square:
-    sera esto?
-'''
+    cuadrado
+"""
 
 class Square:
+    """
+    el ejemplo que pusieron de la documentacion es una cagada
+    """
     pass
