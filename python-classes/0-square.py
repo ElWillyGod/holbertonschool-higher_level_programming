@@ -8,4 +8,5 @@ class Square:
     """
     el ejemplo que pusieron de la documentacion es una cagada
     """
-    pass
+    def __init__(self):
+        pass
