@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+Square:
+    no entiend los estilos
+"""
+
 class Square:
 
     """
