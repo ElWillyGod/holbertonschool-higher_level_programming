@@ -14,10 +14,6 @@ class Square:
     """
 
     def __init__(self, size):
-        """
-        Args:
-            size (int): tamanio del cuadrado
-        """
 
         if type(size) is not int:
             raise TypeError("size must be an integer")
