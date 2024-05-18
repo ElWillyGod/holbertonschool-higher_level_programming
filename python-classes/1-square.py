@@ -7,7 +7,7 @@
 class Square:
 
     """
-     Attributes:
+    Attributes:
         __size (int): tamanio
 
     """
