@@ -5,9 +5,6 @@
 """
 
 
-import re
-
-
 class Square:
     """__init__
     metodo de inicio
