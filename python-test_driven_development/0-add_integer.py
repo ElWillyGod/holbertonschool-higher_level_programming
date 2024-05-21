@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-"""
-    add_integer:
-        suma de dos numeros
-
-"""
+"""add integer"""
 
 
 def add_integer(a, b=98):
     """
-    Return:
-        retorna la suma de dos ints
-
+    esto da error si no son int o float
     """
     if (not isinstance(a, int) and not isinstance(a, float)):
         raise TypeError("a must be an integer")
