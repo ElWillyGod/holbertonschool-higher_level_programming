@@ -53,13 +53,13 @@ first import
 
 	>>> add_integer(float('inf'))
 	Traceback (most recent call last):
-	OverflowError: cannont convert float infinity to integer
+	OverflowError: cannot convert float infinity to integer
 
 ::
 
 	>>> add_integer(33, float('inf'))
 	Traceback (most recent call last):
-	OverflowError: cannont convert float infinity to integer
+	OverflowError: cannot convert float infinity to integer
 
 ::
 
