@@ -19,7 +19,7 @@ first import
 	TypeError: text must be a string
 
 	>>> text_indentation("gay.")
-	gey.
+	gay.
 	<BLANKLINE>
 
 	>>> text_indentation("01110000 01110101 01110100 01101111 00100000 01100101: 01101100 00100000 01110001 01110101 01100101 00100000. 01101100 01100101 01100001")
