@@ -2,9 +2,6 @@
 """magin in text"""
 
 
-from re import L
-
-
 def text_indentation(text):
     """validaciones"""
 
