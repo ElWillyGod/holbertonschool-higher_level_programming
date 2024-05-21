@@ -1,0 +1,11 @@
+The ``2-matrix_divided.py`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+first import
+`` matrix_divided`` from the ``2-matrix_divided.py`` module:
+
+::
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
