@@ -8,7 +8,7 @@ first import
 ``add_integer`` from the ``0-add_integer`` module:
 
 ::
-	>>> add_integer == __import__("0-add_integer").add_integer
+	>>> add_integer = __import__('0-add_integer').add_integer
 	>>> add_integer(6, 3)
     	9
 
