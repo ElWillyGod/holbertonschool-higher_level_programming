@@ -48,3 +48,28 @@ first import
 	>>> add_integer(3, "caca")
 	Traceback (most recent call last):
 	TypeError: b must be an integer
+
+::
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannont convert float infinity to integer
+
+::
+
+	>>> add_integer(33, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannont convert float infinity to integer
+
+::
+
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+::
+
+	>>> add_integer(float('nan'), 22)
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
