@@ -1,0 +1,50 @@
+The ``0-add_integer.py`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+first import
+``add_integer`` from the ``0-add_integer`` module:
+
+::
+
+	>>> add_integer(6, 3)
+    	9
+
+::
+
+	>>> add_integer(1, -1)
+	0
+
+::
+
+	>>> add_integer(2.0, 1.0)
+	3
+
+::
+
+	>>> add_integer(5.8, 0.2)
+	5
+
+::
+
+	>>> add_integer(-2, -1)
+	-3
+
+::
+
+	>>> add_integer(-5, -1.3)
+	-6
+
+::
+
+	>>> add_integer("hello", 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(3, "caca")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
