@@ -75,7 +75,7 @@ first import
 
 ::
 
-	>>> add_integer(3, None)
+	>>> add_integer(3.5, None)
 	Traceback (most recent call last):
 	TypeError: b must be an integer
 
