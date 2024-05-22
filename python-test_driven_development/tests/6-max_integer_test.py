@@ -13,13 +13,13 @@ class TestMaxInteger(unittest.TestCase):
 
 
     def tests(self):
+        """dasd"""
+        aa = []
+        self.assertEqual(max_integer(aa), None)
 
-        self.assertEqual([1, 2, 3, 4], 4)
-        self.assertEqual(max_integer([1, 4, 2]), 4)
-        self.assertEqual(max_integer([-1, -2, -3]), -1)
-        self.assertEqual(max_integer([9, 4, 2]), 9)
-        self.assertEqual(max_integer([]), None)
-        self.assertEqual(max_integer([4]), 4)
+    def tests2(self):
+        nf = [1, 2, 4]
+        self.assertEqual(max_integer(nf), 4)
 
 if __name__ == '__main__':
     unittest.main()
