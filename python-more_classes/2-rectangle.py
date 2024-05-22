@@ -2,9 +2,6 @@
 """class Rectangule"""
 
 
-import re
-
-
 class Rectangle:
     """ Rectangle class"""
 
