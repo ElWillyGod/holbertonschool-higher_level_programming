@@ -1,0 +1,27 @@
+The ``1-my_list.py`` module
+======================
+
+Using ``print_sorted``
+-------------------
+
+first import
+`` print_sorted`` from the ``1-my_list`` module:
+
+::
+	>>> MyList = __import__('1-my_list').MyList
+
+	>>> my_list = MyList()
+	>>>print(my_list)
+	[]
+
+	>>> my_list = MyList([1, 2])
+	>>>print(my_list)
+	[1, 2]
+
+	>>> my_list = MyList(2, 1)
+	>>>print(my_list)
+	[1, 2]
+
+	>>> my_list = MyList(-2, -1)
+	>>>print(my_list)
+	[-1, -1]
