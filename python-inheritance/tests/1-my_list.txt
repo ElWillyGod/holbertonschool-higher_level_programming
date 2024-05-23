@@ -21,3 +21,9 @@
 	>>> my_list.append(2)
 	>>> my_list.print_sorted()
 	[1, 2]
+
+	>>> my_list = MyList(1, 2)
+	>>> my_list.print_sorted()
+ 	Traceback (most recent call last):
+ 	AttributeError: 'tuple' object has no attribute 'print_sorted'
+ 
