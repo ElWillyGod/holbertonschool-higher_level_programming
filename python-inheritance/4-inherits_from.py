@@ -7,4 +7,4 @@
 def inherits_from(obj, a_class):
     """medio mareado"""
 
-    return type(obj) is not a_class and isinstance(obj, a_class)
+    return isinstance(obj, a_class) and type(obj) is not a_class
