@@ -8,10 +8,10 @@
 	>>>print(my_list)
 	[1, 2]
 
-	>>> my_list = MyList(2, 1)
+	>>> my_list = MyList([2, 1])
 	>>>print(my_list)
 	[1, 2]
 
-	>>> my_list = MyList(-2, -1)
+	>>> my_list = MyList([-2, -1])
 	>>>print(my_list)
 	[-1, -1]
