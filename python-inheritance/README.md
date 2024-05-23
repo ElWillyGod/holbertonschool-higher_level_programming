@@ -1,0 +1,3 @@
+# inherece
+
+inherence in python
