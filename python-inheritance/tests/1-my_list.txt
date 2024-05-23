@@ -26,4 +26,6 @@
 	>>> my_list.print_sorted()
  	Traceback (most recent call last):
  	AttributeError: 'tuple' object has no attribute 'print_sorted'
+	>>> print(my_list)
+	(1, 2)
  
