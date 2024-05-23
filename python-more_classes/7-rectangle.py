@@ -1,4 +1,4 @@
-#print_symbol!/usr/bin/python3
+#!/usr/bin/python3
 """Rectangle class"""
 
 
