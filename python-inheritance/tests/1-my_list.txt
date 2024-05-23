@@ -14,4 +14,4 @@
 
 	>>> my_list = MyList([-2, -1])
 	>>>my_list.print_sorted()
-	[-1, -1]
+	[-2, -1]
