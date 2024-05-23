@@ -23,5 +23,5 @@
 	[1, 2]
 
 	>>> my_list = MyList([1, 2])
-	>>> type(my_list.print_sorted()) == list
+	>>> type(my_list) == list
 	True
