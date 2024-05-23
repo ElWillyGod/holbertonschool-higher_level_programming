@@ -2,9 +2,6 @@
 """Rectangle class"""
 
 
-import re
-
-
 class Rectangle:
     """ Rectangle class"""
     print_symbol = '#'
@@ -83,9 +80,9 @@ class Rectangle:
 
         for i in range(self.height):
             if i == self.__height - 1:
-                rec.append(Rectangle.print_symbol * self.__width)
+                rec.append(str(self.print_symbol) * self.__width)
             else:
-                rec.append((Rectangle.print_symbol * self.__width) + '\n')
+                rec.append((str(self.print_symbol) * self.__width) + '\n')
 
         return ("".join(rec))
 
