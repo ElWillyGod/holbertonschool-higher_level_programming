@@ -1,10 +1,10 @@
-#!/usr/bin/python3
+#print_symbol!/usr/bin/python3
 """Rectangle class"""
 
 
 class Rectangle:
     """ Rectangle class"""
-    print_symbol = '#'
+    print_symbol = "#"
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
