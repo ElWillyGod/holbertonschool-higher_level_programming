@@ -23,11 +23,12 @@ class VerboseList(list):
         super().remove(obj)
         print(f"Removed [{obj}] from the list.")
 
-    def pop(self, obj=-1):
+    def pop(self, obj):
         """pop"""
 
-        super().pop(obj)
         if obj is None:
             print(f"Popped [{self[-1]}] from the list.")
         else:
             print(f"Popped [[self[obj]]] from the list.")
+
+        return super().pop(obj)
