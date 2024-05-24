@@ -23,7 +23,7 @@ class VerboseList(list):
         super().remove(obj)
         print(f"Removed [{obj}] from the list.")
 
-    def pop(self, obj):
+    def pop(self, obj=-1):
         """pop"""
 
         if obj is None:
