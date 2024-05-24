@@ -2,7 +2,7 @@
 """Abstract Class"""
 
 
-from abc import ABC
+from abc import ABC, abstractmethod
 
 class Animal(ABC):
     """ clase Abstract"""
