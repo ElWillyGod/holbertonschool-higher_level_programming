@@ -25,17 +25,10 @@ class Shape(ABC):
 class Circle(ABC):
     """class Circle"""
 
-    def __init__(self, radius=0):
+    def __init__(self, radius):
         """init class"""
 
-        self.radius = radius
-
-    @radius.setter
-    def radius(self, radius):
-        if radius < 0:
-            raise AssertionError("Perimeter should handle negative radius")
-        
-        self.__radius = radius
+        self.__radius = abs(radius)
 
     def area(self):
         """area return"""
