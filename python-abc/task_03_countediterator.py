@@ -20,7 +20,8 @@ class CountedIterator:
 
         self.__counter += 1
         try:
-            return next(self.__itera)
+            obje = next(self.__itera)
+            return obje
 
         except ValueError:
             raise StopIteration()
