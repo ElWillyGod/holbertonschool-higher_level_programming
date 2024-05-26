@@ -8,7 +8,7 @@ class CountedIterator:
     def __init__(self, objIter):
         """iterar objeto y implementar contador"""
 
-        self.__iter = iter(objIter)
+        self.itera = iter(objIter)
         self.__counter = 0
 
     @property
@@ -21,6 +21,6 @@ class CountedIterator:
         self.__counter += 1
 
         try:
-            return next(self.__iter)
+            return next(self.itera)
         except StopIteration:
             raise StopIteration
