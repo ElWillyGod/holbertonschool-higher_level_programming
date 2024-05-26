@@ -17,11 +17,10 @@ class CountedIterator:
 
     def __next__(self):
         """return next item"""
+
+        if (len(self.__itera) <= self.__counter):
+            raise StopIteration
+
         self.__counter += 1
 
-        try:
-            return self.__itera.__next__()
-
-        except StopIteration:
-
-            raise StopIteration()
+        return next(self.__itera)
