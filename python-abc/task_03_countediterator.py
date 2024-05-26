@@ -18,11 +18,9 @@ class CountedIterator:
     def __next__(self):
         """return next item"""
         self.__counter += 1
+        iterable = next(self.__itera, None)
 
-        try:
-            return next(self.__itera)
+        if (iterable):
+            return iterable
 
-        except StopIteration:
-
-            raise StopIteration("During handling of the above exception" +
-                                ", another exception occurred")
+        raise StopIteration()
