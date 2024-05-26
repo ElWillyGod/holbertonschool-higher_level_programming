@@ -24,4 +24,5 @@ class CountedIterator:
 
         except StopIteration:
 
-            raise StopIteration()
+            raise StopIteration("During handling of the above exception" +
+                                ", another exception occurred")
