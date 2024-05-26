@@ -10,7 +10,6 @@ class CountedIterator:
 
         self.__itera = iter(objIter)
         self.__counter = 0
-        self.__maxtCount = len(objIter)
 
     def get_count(self):
         """geter in conut"""
@@ -19,9 +18,9 @@ class CountedIterator:
     def __next__(self):
         """return next item"""
 
-        if (self.__maxtCount <= self.__counter):
-            raise StopIteration
-
         self.__counter += 1
+        try:
+            return next(self.__itera)
 
-        return next(self.__itera)
+        except ValueError:
+            raise StopIteration()
