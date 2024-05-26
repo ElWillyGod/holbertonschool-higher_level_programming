@@ -8,18 +8,20 @@ class CountedIterator:
     def __init__(self, objIter):
         """iterar objeto y implementar contador"""
 
-        self.itera = iter(objIter)
-        self.counter = 0
+        self.__itera = iter(objIter)
+        self.__counter = 0
 
     def get_count(self):
         """geter in conut"""
-        return self.counter
+        return self.__counter
 
     def __next__(self):
         """return next item"""
-        self.counter += 1
+        self.__counter += 1
 
         try:
-            return next(self.itera)
+            return next(self.__itera)
+
         except StopIteration:
-            raise StopIteration
+
+            raise StopIteration()
