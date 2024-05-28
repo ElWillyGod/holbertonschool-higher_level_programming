@@ -5,5 +5,5 @@
 def write_file(filename="", text=""):
     """open file and retun the numbers of characters written"""
 
-    with open(filename, encoding='UTF8') as file:
+    with open(filename, 'w', encoding='UTF8') as file:
         return file.write(text)
