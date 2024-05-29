@@ -13,7 +13,8 @@ class Student:
     def to_json(self, attrs=None):
         """to to_json"""
 
-        if not attrs or not isinstance(attrs, list):
+        if not isinstance(attrs, list):
             return self.__dict__
 
-        return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+        return {attr: getattr(self, attr)
+                for attr in attrs if hasattr(self, attr)}
