@@ -13,17 +13,7 @@ class Student:
     def to_json(self, attrs=None):
         """to to_json"""
 
-        direc = self.__dict__
-        direcAttrs = dict()
+        if not attrs or not isinstance(attrs, list):
+            return self.__dict__
 
-        if type(attrs) is list:
-            for i in attrs:
-                if type(i) is not str:
-                    return direc
-
-                if i in direc:
-                    direcAttrs[i] = direc[i]
-
-            return direcAttrs
-
-        return direc
+        return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
