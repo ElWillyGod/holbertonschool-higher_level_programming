@@ -31,7 +31,7 @@ class CustomObject:
         try:
             with open(filename, 'rb') as fileText:
                 objet = pickle.load(fileText)
-        except ValueError:
+        except Exception:
             return None
 
         return objet
