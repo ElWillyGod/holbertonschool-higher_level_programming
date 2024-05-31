@@ -28,10 +28,8 @@ class CustomObject:
     def deserialize(cls, filename):
         """deserialize filename"""
 
-        objet = None
-
         try:
-            with open(filename, 'rd') as fileText:
+            with open(filename, 'rb') as fileText:
                 objet = pickle.load(fileText)
         except ValueError:
             return None
