@@ -21,7 +21,7 @@ class CustomObject:
     def serialize(self, filename):
         """serialize filename"""
 
-        with open(filename, 'wb+') as fileText:
+        with open(filename, 'wb') as fileText:
             pickle.dump(self, fileText)
 
     @classmethod
