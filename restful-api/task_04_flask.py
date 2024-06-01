@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
 
+
 @app.route('/')
 def home():
     return "Welcome to the Flask API!"
