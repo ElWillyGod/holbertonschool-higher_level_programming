@@ -39,5 +39,6 @@ def add_user():
     users[username] = data
     return f"User {username} added successfully!", 201
 
+
 if __name__ == "__main__":
     app.run()
