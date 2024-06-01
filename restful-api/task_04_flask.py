@@ -46,7 +46,9 @@ def add_user():
             "user": data
         }
         return jsonify(response_data), 201
-   
+    else:
+        return jsonify({"error": "Username is required"}), 400
+
 
 if __name__ == "__main__":
     app.run()
