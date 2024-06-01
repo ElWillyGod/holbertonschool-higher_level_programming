@@ -6,8 +6,8 @@ from flask import request
 
 app = Flask(__name__)
 
-users = {"jane": {"username": "jane", "name": "Jane",
-                  "age": 28, "city": "Los Angeles"}}
+users = {"jane": {"username": "jane",
+                  "name": "Jane", "age": 28, "city": "Los Angeles"}}
 
 
 @app.route("/")
@@ -40,7 +40,7 @@ def add_user():
         if data["username"] in users:
             return jsonify({"error": "Username already exists"}), 400
         users[data["username"]] = data
-        return jsonify(data)
+        return jsonify(data), 201
     else:
         return jsonify({"error": "Username is required"}), 400
 
