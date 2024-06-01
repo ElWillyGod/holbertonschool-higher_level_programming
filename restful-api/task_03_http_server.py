@@ -35,8 +35,8 @@ class CustomRequestHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(b'OK')
 
         else:
-            self.send_response(404, "Not Found")
-            self.send_header('Content-type', 'text/html')
+            self.send_response(404)
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
 
@@ -45,7 +45,10 @@ def run(server_class=http.server.HTTPServer,
         handler_class=CustomRequestHandler):
     server_address = ('', 8000)
     httpd = server_class(server_address, handler_class)
-    httpd.serve_forever()
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        pass
 
 
 run()
