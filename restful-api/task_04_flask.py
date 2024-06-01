@@ -38,13 +38,9 @@ def add_user():
     data = request.json
     if "username" in data:
         if data["username"] in users:
-            pass
+           pass 
         users[data["username"]] = data
-        response_data = {
-            "message": "User added",
-            "user": data
-        }
-        return jsonify(response_data), 201
+        return jsonify(data), 201
 
 
 if __name__ == "__main__":
