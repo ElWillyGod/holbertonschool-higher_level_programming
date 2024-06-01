@@ -38,11 +38,11 @@ def add_user():
     data = request.json
     if "username" in data:
         if data["username"] in users:
-            return jsonify({"error": "Username already exists"}), 401
+            return jsonify({"error": "Username already exists"})
         users[data["username"]] = data
-        return jsonify(data), 201
+        return jsonify(data)
     else:
-        return jsonify({"error": "Username is required"}), 400
+        return jsonify({"error": "Username is required"})
 
 
 if __name__ == "__main__":
