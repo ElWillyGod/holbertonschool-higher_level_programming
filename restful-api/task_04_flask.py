@@ -37,6 +37,8 @@ def get_user(username):
 def add_user():
     data = request.json
     if "username" in data:
+        if data["username"] in users:
+            return jsonify({"error": "Username already exists"}), 400
         users[data["username"]] = data
         return jsonify(data)
     else:
