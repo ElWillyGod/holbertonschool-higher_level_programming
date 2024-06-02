@@ -45,7 +45,7 @@ def login():
     password = user.get('password')
     userAcces = users.get(username)
 
-    if userAcces and check_password_hash(user['password'], password):
+    if userAcces and check_password_hash(userAcces['password'], password):
 
         access_token = create_access_token(
                 identity={'username': username, 'role': userAcces['role']})
