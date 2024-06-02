@@ -24,7 +24,7 @@ auth = HTTPBasicAuth()
 jwt = JWTManager(app)
 
 
-@app.route("/basic-protected", methods=["GET"])
+@app.route("/basic-protected") 
 @auth.login_required
 def basic_protected():
     return "Basic Auth: Access Granted"
@@ -55,13 +55,13 @@ def login():
     return jsonify({'error': "data invalid"}), 401
 
 
-@app.route("/jwt-protected", methods=["GET"])
+@app.route("/jwt-protected")
 @jwt_required()
 def protected_route():
     return "JWT Auth: Access Granted"
 
 
-@app.route("/admin-only", methods=["GET"])
+@app.route("/admin-only")
 @jwt_required()
 def admin_user():
 
