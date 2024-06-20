@@ -1,0 +1,3 @@
+-- SHOW tables
+
+SHOW tables
