@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Write a script that lists all states from the database hbtn_0e_0_usa"""
+import MySQLdb
+import sys
 
 
 def states(username, userPassword, database_name):
@@ -24,7 +26,8 @@ def states(username, userPassword, database_name):
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states " +
+                "WHERE name LIKE BINARY 'N%' ORDER BY states.id")
 
     rows = cur.fetchall()
 
@@ -38,8 +41,6 @@ def states(username, userPassword, database_name):
 
 if __name__ == "__main__":
     """mas cosas"""
-    import MySQLdb
-    import sys
 
     user = sys.argv[1]
     passw = sys.argv[2]
