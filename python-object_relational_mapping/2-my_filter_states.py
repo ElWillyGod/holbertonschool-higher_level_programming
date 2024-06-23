@@ -26,9 +26,10 @@ def states(username, userPassword, database_name, state_name):
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states " +
-                "WHERE name LIKE BINARY '{}' ORDER BY states.id"
-                .format(state_name))
+    query = ("SELECT * FROM states " +
+             "WHERE name LIKE BINARY %s ORDER BY states.id")
+
+    cur.execute(query, (state_name,))
 
     rows = cur.fetchall()
 
