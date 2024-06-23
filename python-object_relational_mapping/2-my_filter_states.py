@@ -26,8 +26,10 @@ def states(username, userPassword, database_name, state_name):
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states " +
-                "WHERE name = '"+state_name+"' ORDER BY states.id")
+    query = ("SELECT * FROM states " +
+          "WHERE name = %s ORDER BY states.id")
+
+    cur.execute(query, (state_name,))
 
     rows = cur.fetchall()
 
