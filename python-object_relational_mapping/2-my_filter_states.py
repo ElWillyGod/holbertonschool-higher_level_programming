@@ -27,7 +27,7 @@ def states(username, userPassword, database_name, state_name):
     cur = db.cursor()
 
     query = ("SELECT * FROM states " +
-             "WHERE name = %s ORDER BY states.id")
+             "WHERE BINARY name LIKE %s ORDER BY states.id")
 
     cur.execute(query, (state_name,))
 
