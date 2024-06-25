@@ -14,7 +14,7 @@ def listState(user, passw, dbName):
 
     session = Session(engine)
 
-    for state in session.query(State).order_by(State.id): # HERE: no SQL query, only objects!
+    for state in session.query(State).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
 
     session.close()
