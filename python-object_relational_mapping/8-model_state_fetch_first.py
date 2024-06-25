@@ -12,11 +12,13 @@ def listState(user, passw, dbName):
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(user, passw, dbName), pool_pre_ping=True)
 
-    Session = sessionmaker(bind=engine)
-    session = Session()
+    session = Session(engine)
 
     for state in session.query(State).first():
-        print("{}: {}".format(state.id, state.name))
+        if state:
+            print("{}: {}".format(state.id, state.name))
+        else:
+            print('Nothing')
 
     session.close()
 
