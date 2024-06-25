@@ -16,7 +16,7 @@ def listState(user, passw, dbName):
     session = Session(engine)
 
     for city, state in (session.query(City, State)
-                        .filter(State.id == City.state_id)
+                        .filter(City.state_id == State.id)
                         .order_by(City.id).all()):
 
         print("{}: ({}) {}".format(state.name, city.id, city.name))
