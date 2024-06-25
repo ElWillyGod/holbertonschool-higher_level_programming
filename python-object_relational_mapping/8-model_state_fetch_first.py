@@ -12,7 +12,8 @@ def listState(user, passw, dbName):
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(user, passw, dbName), pool_pre_ping=True)
 
-    session = Session(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
     for state in session.query(State).first():
         print("{}: {}".format(state.id, state.name))
