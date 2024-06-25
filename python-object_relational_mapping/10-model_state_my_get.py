@@ -17,7 +17,7 @@ def listState(user, passw, dbName, name):
     state = session.query(State).filter(State.name == name).first()
 
     if state:
-        print("{}: {}".format(state.id, state.name))
+        print("{}".format(state.id))
     else:
         print('Not found')
 
