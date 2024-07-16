@@ -10,7 +10,7 @@ def generate_invitations(template: str, attendees: list[dict]):
     if not isinstance(attendees, list):
         return "No data provided, no output files generated."
     
-    if all(isinstance(valor, dict) for valor in attendees):
+    if not all(isinstance(valor, dict) for valor in attendees):
         return "No data provided, no output files generated."
             
     
@@ -28,9 +28,11 @@ def generate_invitations(template: str, attendees: list[dict]):
             
             forReplace = "{" + key + "}"
             
-            templateModified = templateModified.replace(forReplace, attendee.get(key, "N/A"))
+            print(f"{key}")
+            
+            templateModified = templateModified.replace(forReplace, attendee.get(key) or key + ": N/A")
 
-        with open('output_'+ str(i) +'.txt', 'w') as file:
+        with open('output_'+ str(i) +'.txt', 'a') as file:
             file.write(templateModified)
             
         i += 1
