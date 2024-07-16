@@ -5,16 +5,13 @@ import os
 def generate_invitations(template: str, attendees: list[dict]):
     
     if template is None or template == "":
-        print("Template is empty, no output files generated.")
-        os.abort()
+        return "Template is empty, no output files generated."
     
     if not isinstance(attendees, list[dict]):
-        print("No data provided, no output files generated.")
-        os.abort()
+        return "No data provided, no output files generated."
     
     if all(isinstance(valor, dict) for valor in attendees):
-        print("No data provided, no output files generated.")
-        os.abort()
+        return "No data provided, no output files generated."
             
     
     """ Iterate over the list of attendees and replace the placeholders in the template with the corresponding values from each attendee’s dictionary.
