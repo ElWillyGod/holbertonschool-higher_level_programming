@@ -30,7 +30,7 @@ def generate_invitations(template: str, attendees: list[dict]):
             
             templateModified = templateModified.replace(forReplace, attendee.get(key, "N/A"))
             
-        fileModified = open("output_" + str(i) + ".txt", "w")
+        fileModified = open("output_" + str(i) + ".txt", 'a')
         fileModified.write(templateModified)
         fileModified.close()
             
