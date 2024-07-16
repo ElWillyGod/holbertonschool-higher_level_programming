@@ -4,7 +4,7 @@ import os
 
 def generate_invitations(template: str, attendees: list[dict]):
     
-    if template is None or template == "":
+    if not isinstance(template, str) or not template:
         return "Template is empty, no output files generated."
     
     if not isinstance(attendees, list):
@@ -28,7 +28,7 @@ def generate_invitations(template: str, attendees: list[dict]):
             
             forReplace = "{" + key + "}"
             
-            templateModified = str(templateModified).replace(forReplace, str(attendee.get(key) or "N/A"))
+            templateModified = templateModified.replace(forReplace, attendee.get(key) or "N/A")
 
         with open('output_'+ str(i) +'.txt', 'a') as file:
             file.write(templateModified)
