@@ -7,7 +7,7 @@ def generate_invitations(template: str, attendees: list[dict]):
     if template is None or template == "":
         return "Template is empty, no output files generated."
     
-    if not isinstance(attendees, list[dict]):
+    if not isinstance(attendees, list):
         return "No data provided, no output files generated."
     
     if all(isinstance(valor, dict) for valor in attendees):

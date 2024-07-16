@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Main file content
 from task_00_intro import generate_invitations
 
