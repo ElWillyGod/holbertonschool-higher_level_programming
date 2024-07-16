@@ -28,7 +28,7 @@ def generate_invitations(template: str, attendees: list[dict]):
             
             forReplace = "{" + key + "}"
             
-            templateModified = templateModified.replace(forReplace, attendee.get(key) or key + ": N/A")
+            templateModified = templateModified.replace(forReplace, attendee.get(key) or "N/A")
 
         with open('output_'+ str(i) +'.txt', 'a') as file:
             file.write(templateModified)
