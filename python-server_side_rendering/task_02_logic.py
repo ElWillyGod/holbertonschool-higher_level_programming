@@ -22,10 +22,11 @@ def items():
     
         with open('items.json', 'r') as f:
             items = json.load(f)
-            values = items.get('items', [])
-        
-    except FileNotFoundError:
+            
+        values = items.get('items', [])
+    except :
         values = []
+        
     return render_template('items.html', values=values)
 
 if __name__ == '__main__':
