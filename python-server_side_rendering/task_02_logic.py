@@ -24,10 +24,11 @@ def items():
             items = json.load(f)
             
         values = items.get('items', [])
+        
     except Exception:
         values = []
-        
-    return render_template('items.html', values=values)
+    
+    return render_template('items.html', items=values)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
