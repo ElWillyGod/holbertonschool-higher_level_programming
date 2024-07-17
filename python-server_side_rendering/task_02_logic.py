@@ -22,7 +22,8 @@ def items():
     with open('items.json', 'r') as f:
         items = json.load(f)
         values = items.get('items', [])
-        return render_template('items.html', values=values)
+        
+    return render_template('items.html', values=values)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
