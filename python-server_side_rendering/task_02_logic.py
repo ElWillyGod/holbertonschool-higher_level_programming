@@ -24,7 +24,7 @@ def items():
             items = json.load(f)
             
         values = items.get('items', [])
-    except :
+    except Exception:
         values = []
         
     return render_template('items.html', values=values)
