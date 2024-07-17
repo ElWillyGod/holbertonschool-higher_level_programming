@@ -12,11 +12,6 @@ def generate_invitations(template: str, attendees: list[dict]):
     
     if not all(isinstance(valor, dict) for valor in attendees):
         return "No data provided, no output files generated."
-            
-    
-    """ Iterate over the list of attendees and replace the placeholders in the template with the corresponding values from each attendee’s dictionary.
-        If a value is missing, replace it with “N/A”.
-    """
     
     i = 1
     
