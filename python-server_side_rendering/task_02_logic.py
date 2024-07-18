@@ -27,7 +27,6 @@ def items():
         
     except Exception:
         values = []
-    
     return render_template('items.html', items=values)
 
 if __name__ == '__main__':
