@@ -18,15 +18,12 @@ def contact():
 
 @app.route('/items')
 def items():
-    try:
     
-        with open('items.json', 'r') as f:
-            items = json.load(f)
+    with open('items.json', 'r') as f:
+        items = json.load(f)
             
-        values = items.get('items', [])
-        
-    except Exception:
-        values = []
+    values = items.get('items', [])
+
     return render_template('items.html', items=values)
 
 if __name__ == '__main__':
