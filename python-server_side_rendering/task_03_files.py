@@ -29,7 +29,6 @@ def items():
 def products():
     source = request.args.get('source')
     id = request.args.get('id')
-    products = []
     
     if source == 'json':
         with open('products.json', 'r') as f:
@@ -44,8 +43,8 @@ def products():
         return render_template('product_display.html', errorMessage="Wrong source")
     
     if id:
-        products = [product for product in products if product['id'] == id]
-        
+        products = [product for product in products if str(product['id']) == id]
+
         if products is None:
                 return render_template('product_display.html', errorMessage="Product not found")
     
