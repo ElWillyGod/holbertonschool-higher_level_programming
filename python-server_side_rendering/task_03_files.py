@@ -30,6 +30,7 @@ def products():
     source = request.args.get('source')
     id = request.args.get('id')
     
+    products = []
     if source == 'json':
         with open('products.json', 'r') as f:
             products = json.load(f)
