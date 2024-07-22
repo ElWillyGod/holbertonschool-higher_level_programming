@@ -46,7 +46,7 @@ def products():
     if id:
         products = [product for product in products if str(product['id']) == id]
 
-        if products is None:
+        if len(products) == 0:
                 return render_template('product_display.html', errorMessage="Product not found")
     
     return render_template('product_display.html', products=products)
